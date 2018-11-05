@@ -1,0 +1,22 @@
+{
+  "name": "malcolm-rollup-fun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./dist && yarn build:es",
+    "build:es":
+      "cross-env NODE_ENV=development rollup -c ./rollup.config.js  -f es ./index.js -o dist/index.es.js",
+    "build:umd":
+      "cross-env NODE_ENV=development rollup -c ./rollup.config.js  -f umd ./index.js -o dist/index.umd.js",
+    "build:cjs":
+      "cross-env NODE_ENV=development rollup -c ./rollup.config.js  -f cjs ./index.js -o dist/index.cjs.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "rollup": "0.67.0"
+  }
+}
