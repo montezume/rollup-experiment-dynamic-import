@@ -1,7 +1,9 @@
 const config = {
   output: {
     name: "index",
-    sourcemap: true
-  }
+    sourcemap: true,
+    dir: "dist/"
+  },
+  experimentalCodeSplitting: true
 };
 module.exports = config;

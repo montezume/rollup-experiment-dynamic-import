@@ -5,7 +5,7 @@ const constants = {
 
 const getMath = () => {
   return new Promise((resolve, reject) => {
-    import("./math").then(
+    import("./math.js").then(
       success => {
         resolve(success);
       },
@@ -14,7 +14,10 @@ const getMath = () => {
   });
 };
 
-export default {
+var index = {
   constants,
   getMath
 };
+
+export default index;
+//# sourceMappingURL=index.js.map
