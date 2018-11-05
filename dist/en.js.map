@@ -1,0 +1,1 @@
+{"version":3,"file":"en.js","sources":["../src/quotes/en.js"],"sourcesContent":["const quotes = [\n  \"My greatest pain in life is that I will never be able to see myself perform live\",\n  \"George Bush doesn't care about black people\"\n];\n\nexport default quotes;\n"],"names":[],"mappings":"AAAA,MAAM,MAAM,GAAG;EACb,kFAAkF;EAClF,6CAA6C;CAC9C,CAAC;;;;"}

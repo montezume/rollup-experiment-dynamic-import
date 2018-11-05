@@ -1,23 +1,17 @@
-const constants = {
-  ADD: "add",
-  SUBTRACT: "subtract"
+const getQuotes = lang => {
+  switch (lang) {
+    case "en":
+      return import("./en.js");
+    case "fr":
+      return import("./fr.js");
+  }
 };
 
-const getMath = () => {
-  return new Promise((resolve, reject) => {
-    import("./math.js").then(
-      success => {
-        resolve(success);
-      },
-      error => reject(error)
-    );
-  });
+const content = lang => {
+  getQuotes(lang).then(success => success[0]);
 };
 
-var index = {
-  constants,
-  getMath
-};
+var index = { content };
 
 export default index;
 //# sourceMappingURL=index.js.map

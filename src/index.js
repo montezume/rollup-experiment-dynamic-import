@@ -1,20 +1,14 @@
-const constants = {
-  ADD: "add",
-  SUBTRACT: "subtract"
+const getQuotes = lang => {
+  switch (lang) {
+    case "en":
+      return import("./quotes/en");
+    case "fr":
+      return import("./quotes/french/fr");
+  }
 };
 
-const getMath = () => {
-  return new Promise((resolve, reject) => {
-    import("./math/functions/math").then(
-      success => {
-        resolve(success);
-      },
-      error => reject(error)
-    );
-  });
+const content = lang => {
+  getQuotes(lang).then(success => success[0]);
 };
 
-export default {
-  constants,
-  getMath
-};
+export default { content };
